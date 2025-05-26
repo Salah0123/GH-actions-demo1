@@ -23,7 +23,7 @@ jobs:
     name: first job
     runs-on: ubuntu-latest
     container:
-      image: node:14.16
+      image: node:18-bullseye
     steps:
       - name: check nodemversion
         run: node -v
