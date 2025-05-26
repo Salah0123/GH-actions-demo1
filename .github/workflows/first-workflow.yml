@@ -7,7 +7,7 @@ on:
   #       description: "this is version name for github workflow"
   # repository_dispatch:
   #   types: [test]
-  push
+  push:
     # branches:
     #   - "main"
     #   - "feat/**"
@@ -29,7 +29,7 @@ jobs:
         run: node -v
         
       - name: before checkout action
-        if: github.ref == 'refs/head/feature'
+        if: startsWith(github.ref, 'refs/heads/feature')
         run: ls
         shell: bash
 
